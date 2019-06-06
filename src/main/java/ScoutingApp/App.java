@@ -3,12 +3,28 @@
  */
 package ScoutingApp;
 
+import com.thebluealliance.api.v3.*;
+import java.util.ArrayList;
+
+
 public class App {
-    public String getGreeting() {
-        return "Hello world.";
-    }
+
+
 
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+        String authKey = ""; //Insert auth key here
+        TBA tba = new TBA(authKey);
+        try {
+            Event newEvent = new Event(tba, "2019micmp2");
+            newEvent.printTeamList();
+            System.out.println("yay, it worked :)");
+
+        } catch (Exception e) {
+            //DONE: handle exception
+            System.out.println(e.toString());
+            System.out.println("Wow didn't work :(");
+        }
+        return;
     }
+
 }

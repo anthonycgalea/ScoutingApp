@@ -1,6 +1,7 @@
 package ScoutingApp;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class TeamMatch {
 
@@ -27,7 +28,6 @@ public class TeamMatch {
     public final int ssCross = 14;
     public final int ssStart = 15;
     public final int values = 16; //CHANGE THIS IF YOU ADD OR REMOVE VALUES OTHERWISE IT WILL NOT WORK
-
  */
 
     public TeamMatch(Team robot, int matchNum) {
@@ -43,8 +43,13 @@ public class TeamMatch {
     }
 
     public void scoutMatch() {
-        //TODO: this shit
-
+        //DONE: this shit
+        Scanner scanner = new Scanner(System.in);
+        for (int i = 0; i < 16; i++) {
+            System.out.print("Record stat:\t");
+            matchData[i] = scanner.nextInt();
+        }
+        finishMatch();
         return;
     }
 

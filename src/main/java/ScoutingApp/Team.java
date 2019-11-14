@@ -1,10 +1,8 @@
 package ScoutingApp;
 
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
+import java.io.*;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Team {
     public int id; //Team Number
@@ -47,6 +45,7 @@ public class Team {
         this.mins = new double[this.values];
         this.stdDevs = new double[this.values];
         this.matchesPlayed = 0;
+        this.stats = new ArrayList<>();
         for (int i = 0; i < values; i++) {
             ArrayList<Double> newList = new ArrayList<>();
             this.stats.add(newList);
@@ -70,6 +69,20 @@ public class Team {
         for (int i = 0; i < this.averages.length; i++) {
             this.averages[i] = myMath.average(this.stats.get(i));
         }
+    }
+
+    public void displayStats() {
+
+    }
+
+    public void testScout() {
+        TeamMatch testMatch = new TeamMatch(this, 1);
+        testMatch.scoutMatch();
+        exportMatches();
+    }
+
+    public void testImport() {
+        importMatches();
     }
 
     public void updateMaxes() {
@@ -117,40 +130,80 @@ public class Team {
     }
 
     public void importMatches() {
-        //TODO: this
+        //DONE: this
         try {
             String line = "";
-            FileReader fw = new FileReader(id+ ".txt");
-            for (int i = 0; i < matchesPlayed; i++) {
-
+            Scanner scanner = new Scanner(new File("res/toImport/" + id + ".txt"));
+            while(scanner.hasNext()) {
+                line = scanner.nextLine();
+                char j;
+                Double mNo;
+                int k = 0;
+                String temp = "";
+                j = line.charAt(0);
+                while (j != ',') {
+                    temp+=j;
+                    k++;
+                    j = line.charAt(k);
+                }
+                mNo = Double.parseDouble(temp);
+                if (!stats.get(0).contains(mNo)) {
+                    System.out.println("Found unique match!");
+                    matchesPlayed++;
+                    k = 0;
+                    for (int l = 0; l < values; l++) {
+                        System.out.println("importing stat #" + l);
+                        Double num;
+                        temp = "";
+                        j = line.charAt(k);
+                        while (j != ',') {
+                            temp+=j;
+                            k++;
+                            j = line.charAt(k);
+                        }
+                        k++;
+                        num = Double.parseDouble(temp);
+                        stats.get(l).add(num);
+                    }
+                }
             }
+            scanner.close();
+            File file = new File("res/toImport/" + id + ".txt");
+            file.delete();
         }
         catch (IOException e) {
             System.out.println("die dumbass");
-        }
+    }
         return;
     }
 
     public void exportMatches() {
-        //TODO: this
+        //DONE: this?????
+        //I think this should work? I love how I'm programming this in a stupid order so I can't test this until way later.
         try {
+            File file = new File("res/" + id + ".txt");
+            file.delete();
             String line = "";
-            FileWriter fw = new FileWriter(id+ ".txt");
+            FileWriter fw = new FileWriter("res/" + id+ ".txt");
             PrintWriter pw = new PrintWriter(fw);
             for (int i = 0; i < matchesPlayed; i++) {
+                line = "";
+                System.out.println("Exporting match #" + i);
                 for (int j = 0; j < values; j++) {
-                    line+=stats.get(i).get(j);
-                    if (i < matchesPlayed - 1) {
+                    System.out.println("Exporting stat #" + j);
+                    line+=stats.get(j).get(i);
                         line += ",";
-                    }
                 }
+                line+=".";
+                System.out.println(line);
                 pw.println(line);
             }
+            pw.close();
+            System.out.println("successfully exported");
         }
         catch (IOException e) {
             System.out.println("die dumbass");
         }
-        return;
     }
 
 }

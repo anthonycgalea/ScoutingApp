@@ -13,7 +13,7 @@ public class App {
 
 
     public static void main(String[] args) {
-        String authKey = "cJQfMZDk3HKWc2odfpLjhTjUrhvNx2n2PUWx1MZLy3odT9X1mHPm1I5pUjDvhw2Q"; //Insert auth key here
+/*        String authKey = "cJQfMZDk3HKWc2odfpLjhTjUrhvNx2n2PUWx1MZLy3odT9X1mHPm1I5pUjDvhw2Q"; //Insert auth key here
         TBA tba = new TBA(authKey);
         Scanner scanner = new Scanner(System.in);
         try {
@@ -35,6 +35,20 @@ public class App {
             System.out.println("Wow didn't work :(");
         }
         return;
+
+ */
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter event key:\t");
+        String key = scanner.nextLine();
+        System.out.println("Enter team number");
+        int teamNum = scanner.nextInt();
+        Team team = new Team(teamNum, key);
+        team.testImport();
+        team.testScout();
+        team.updateStats();
+
+
+
     }
 
 }

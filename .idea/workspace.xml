@@ -2,13 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ff7ce328-9159-4a70-910a-b95e77de5990" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/META-INF/ScoutingApp.main.kotlin_module" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/classes/ScoutingApp/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/ScoutingApp/App.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/ScoutingApp/Event.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/ScoutingApp/Event.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/ScoutingApp/Team.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/ScoutingApp/Team.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/classes/ScoutingApp/TeamMatch.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/ScoutingApp/TeamMatch.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ScoutingApp/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ScoutingApp/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ScoutingApp/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ScoutingApp/Event.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ScoutingApp/Team.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ScoutingApp/Team.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ScoutingApp/TeamMatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ScoutingApp/TeamMatch.java" afterDir="false" />
     </list>
@@ -35,11 +34,18 @@
   </component>
   <component name="ProjectId" id="1TcNKrH78UgT2Vc46yvw4TfyGMK" />
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/ScoutingApp" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\galeaac\Documents\GitHub\ScoutingApp\res\toImport" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\galeaac\Documents\GitHub\ScoutingApp\src\main\java\ScoutingApp" />
     </key>
@@ -101,6 +107,14 @@
       <option name="presentableId" value="Default" />
       <updated>1559759307787</updated>
     </task>
+    <task id="LOCAL-00001" summary="i'm finally working on this again">
+      <created>1573756445595</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1573756445595</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -114,20 +128,8 @@
       </map>
     </option>
   </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ProjectJDKs.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="i'm finally working on this again" />
+    <option name="LAST_COMMIT_MESSAGE" value="i'm finally working on this again" />
   </component>
 </project>

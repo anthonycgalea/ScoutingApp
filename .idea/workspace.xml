@@ -3,13 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="ff7ce328-9159-4a70-910a-b95e77de5990" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/META-INF/ScoutingApp.main.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/classes/ScoutingApp/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/ScoutingApp/App.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/classes/ScoutingApp/Team.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/ScoutingApp/Team.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/ScoutingApp/TeamMatch.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/ScoutingApp/TeamMatch.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ScoutingApp/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ScoutingApp/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ScoutingApp/Team.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ScoutingApp/Team.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ScoutingApp/TeamMatch.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ScoutingApp/TeamMatch.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

@@ -46,6 +46,7 @@ public class App {
         team.testImport();
         team.testScout();
         team.updateStats();
+        team.displayStats();
 
 
 

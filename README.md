@@ -4,12 +4,12 @@
 <h4>Completed Features</h>
 <ul>
 <li>Download match schedules as well as team list from The Blue Alliance (Needs a data connection) (done)
+<li>Export scouting data to a .txt file, send it to a head scout over Bluetooth/USB, and use that to combine scouting data together
 </ul>
 
 <h4>Planned Features</h>
 <ul>
 <li>Distribute match schedules to scouts over Bluetooth/USB 
-<li>Export scouting data to a .txt file, send it to a head scout over Bluetooth/USB, and use that to combine scouting data together
 <li>Bring the app with you to alliance selection, and keep up with what teams are being selected, which removes
  the team from potential picks to avoid being the team that picks an already picked team.
 <li>Match planning mode - input a match, and see scouting data on all 6 teams in the match.

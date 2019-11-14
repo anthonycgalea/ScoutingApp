@@ -50,6 +50,47 @@ public class Team {
             ArrayList<Double> newList = new ArrayList<>();
             this.stats.add(newList);
         }
+        try {
+            String line = "";
+            Scanner scanner = new Scanner(new File("res/" + id + ".txt"));
+            while(scanner.hasNext()) {
+                line = scanner.nextLine();
+                char j;
+                Double mNo;
+                int k = 0;
+                String temp = "";
+                j = line.charAt(0);
+                while (j != ',') {
+                    temp+=j;
+                    k++;
+                    j = line.charAt(k);
+                }
+                mNo = Double.parseDouble(temp);
+                if (!stats.get(0).contains(mNo)) {
+                    System.out.println("Found unique match!");
+                    matchesPlayed++;
+                    k = 0;
+                    for (int l = 0; l < values; l++) {
+                        System.out.println("importing stat #" + l);
+                        Double num;
+                        temp = "";
+                        j = line.charAt(k);
+                        while (j != ',') {
+                            temp+=j;
+                            k++;
+                            j = line.charAt(k);
+                        }
+                        k++;
+                        num = Double.parseDouble(temp);
+                        stats.get(l).add(num);
+                    }
+                }
+            }
+            scanner.close();
+        } catch (IOException e) {
+            System.out.println("New team!");
+
+        }
         upToDate = true;
     }
 
@@ -72,7 +113,7 @@ public class Team {
     }
 
     public void displayStats() {
-
+        System.out.println("cargo average:" + averages[csCargoPM]);
     }
 
     public void testScout() {
@@ -172,7 +213,7 @@ public class Team {
             file.delete();
         }
         catch (IOException e) {
-            System.out.println("die dumbass");
+            System.out.println("No file to import!");
     }
         return;
     }

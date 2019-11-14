@@ -20,7 +20,6 @@ public class Event {
 
     public Event(TBA tba, String eventKey) {
         try {
-          //  this.event = tba.eventRequest.getEvent(eventKey);
             this.eventKey = eventKey;
             this.eventName = tba.eventRequest.getEvent(eventKey).getName();
             this.matches = tba.eventRequest.getMatches(eventKey);
@@ -72,6 +71,10 @@ public class Event {
         for (int i = 0; i < this.matchList.size(); i++) {
             this.matchList.get(i).printMatch();
         }
+    }
+
+    public void selectAlliances() {
+
     }
 
 

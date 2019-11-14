@@ -1,5 +1,9 @@
 package ScoutingApp;
 
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 
 public class Team {
@@ -112,5 +116,41 @@ public class Team {
         this.upToDate = false;
     }
 
+    public void importMatches() {
+        //TODO: this
+        try {
+            String line = "";
+            FileReader fw = new FileReader(id+ ".txt");
+            for (int i = 0; i < matchesPlayed; i++) {
+
+            }
+        }
+        catch (IOException e) {
+            System.out.println("die dumbass");
+        }
+        return;
+    }
+
+    public void exportMatches() {
+        //TODO: this
+        try {
+            String line = "";
+            FileWriter fw = new FileWriter(id+ ".txt");
+            PrintWriter pw = new PrintWriter(fw);
+            for (int i = 0; i < matchesPlayed; i++) {
+                for (int j = 0; j < values; j++) {
+                    line+=stats.get(i).get(j);
+                    if (i < matchesPlayed - 1) {
+                        line += ",";
+                    }
+                }
+                pw.println(line);
+            }
+        }
+        catch (IOException e) {
+            System.out.println("die dumbass");
+        }
+        return;
+    }
 
 }

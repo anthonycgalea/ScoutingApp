@@ -31,7 +31,7 @@ public class TeamMatch {
  */
 
     public TeamMatch(Team robot, int matchNum) {
-
+        this.robot = robot;
         this.matchData = new double[robot.values];
         this.matchData[0] = matchNum;
 
@@ -40,6 +40,12 @@ public class TeamMatch {
 
     public void finishMatch() {
         this.robot.submitMatch(this.matchData);
+    }
+
+    public void scoutMatch() {
+        //TODO: this shit
+
+        return;
     }
 
 

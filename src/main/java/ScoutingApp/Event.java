@@ -14,8 +14,9 @@ public class Event {
     private com.thebluealliance.api.v3.models.Event event;
     private Match[] matches;
     private String eventName;
-    public ArrayList<Integer> teamList;
+    private ArrayList<Integer> teamList;
     private ArrayList<ScoutingApp.Match> matchList;
+    private ArrayList<ScoutingApp.Team> teamArray;
 
 
     public Event(TBA tba, String eventKey) {
@@ -25,9 +26,11 @@ public class Event {
             this.matches = tba.eventRequest.getMatches(eventKey);
             this.teamList = new ArrayList<>();
             this.matchList = new ArrayList<>();
+            this.teamArray = new ArrayList<>();
             SimpleTeam[] teams = tba.eventRequest.getSimpleTeams(eventKey);
             for (int i = 0; i < teams.length; i++) {
                 this.teamList.add(teams[i].getTeamNumber());
+                this.teamArray.add(new ScoutingApp.Team(teams[i].getTeamNumber()));
             }
             SimpleMatch[] matches = tba.eventRequest.getSimpleMatches(eventKey);
             for (int i = 0; i < matches.length; i++) {
@@ -38,7 +41,7 @@ public class Event {
         }
         catch (Exception e) {
             System.out.println(e.toString());
-            System.out.println("Error, event doesn't exit");
+            System.out.println("Error, event doesn't exist");
         }
 
     }
@@ -73,9 +76,36 @@ public class Event {
         }
     }
 
-    public void selectAlliances() {
+    public void importMatches() {
+        for (int i = 0; i < this.teamArray.size(); i++) {
+            teamArray.get(i).importMatches();
+        }
+    }
 
+    public void exportMatches() {
+        for (int i = 0; i < this.teamArray.size(); i++) {
+            teamArray.get(i).exportMatches();
+        }
+    }
+
+    public void selectAlliances() {
+        AllianceSelection as = new AllianceSelection(getTeamList(), 8, 3, false);
+        as.runAllianceSelection();
     }
 
 
+    public void updateAverages() {
+        for (int i = 0; i < this.teamArray.size(); i++) {
+            teamArray.get(i).updateAverages();
+        }
+    }
+    public boolean atEvent(int number) {
+        if (teamList.contains(number)) {
+            return true;
+        }
+        return false;
+    }
+    public Team getTeam(int number) {
+        return teamArray.get(teamList.indexOf(number));
+    }
 }

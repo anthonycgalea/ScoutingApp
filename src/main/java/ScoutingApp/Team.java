@@ -6,9 +6,8 @@ import java.util.Scanner;
 
 public class Team {
     public int id; //Team Number
-    public String eventKey; //EventKey as a backup. Will probably remove eventually.
     //Indexes for stats.
-    public final int matchNo = 0;
+    public final int matchNo = 0; //SS = sandstorm, PM = per match
     public final int csCargoPM = 1;
     public final int csHatchPM = 2;
     public final int csCargoSS = 3;
@@ -34,11 +33,10 @@ public class Team {
     private double[] mins;
     private double[] stdDevs;
     private ArrayList<ArrayList<Double>> stats;
-    public boolean upToDate;
+    private boolean upToDate;
 
-    public Team(int id, String eventKey) {
+    public Team(int id) {
         this.id = id;
-        this.eventKey = eventKey;
         this.averages = new double[this.values];
         this.maxes = new double[this.values];
         this.medians = new double[this.values];
@@ -112,18 +110,10 @@ public class Team {
         }
     }
 
-    public void displayStats() {
-        System.out.println("cargo average:" + averages[csCargoPM]);
-    }
-
     public void testScout() {
         TeamMatch testMatch = new TeamMatch(this, 1);
         testMatch.scoutMatch();
         exportMatches();
-    }
-
-    public void testImport() {
-        importMatches();
     }
 
     public void updateMaxes() {

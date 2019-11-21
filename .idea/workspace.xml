@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ff7ce328-9159-4a70-910a-b95e77de5990" name="Default Changelist" comment="">
+    <list default="true" id="ff7ce328-9159-4a70-910a-b95e77de5990" name="Default Changelist" comment="i'm finally working on this again">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/classes/ScoutingApp/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/ScoutingApp/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/ScoutingApp/Event.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/ScoutingApp/Event.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/classes/ScoutingApp/Team.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/ScoutingApp/Team.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ScoutingApp/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ScoutingApp/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ScoutingApp/Event.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ScoutingApp/Event.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ScoutingApp/Team.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ScoutingApp/Team.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -120,7 +121,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

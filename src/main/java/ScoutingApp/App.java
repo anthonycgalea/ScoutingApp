@@ -13,21 +13,64 @@ public class App {
 
 
     public static void main(String[] args) {
-/*        String authKey = "cJQfMZDk3HKWc2odfpLjhTjUrhvNx2n2PUWx1MZLy3odT9X1mHPm1I5pUjDvhw2Q"; //Insert auth key here
+        String authKey = "cJQfMZDk3HKWc2odfpLjhTjUrhvNx2n2PUWx1MZLy3odT9X1mHPm1I5pUjDvhw2Q"; //Insert auth key here
         TBA tba = new TBA(authKey);
         Scanner scanner = new Scanner(System.in);
         try {
-            System.out.println("Enter event key:\t");
+            System.out.println("Welcome to the testing stuff!");
+            System.out.println("Please enter the event key:\t");
             String key = scanner.nextLine();
             Event newEvent = new Event(tba, key);
-            newEvent.printTeamList();
-            System.out.println("Enter number of alliances:\t");
-            int alliances = scanner.nextInt();
-            System.out.println("Enter teams per alliance:\t");
-            int tPA = scanner.nextInt();
-            AllianceSelection as = new AllianceSelection(newEvent.getTeamList(), alliances, tPA, false);
-            as.runAllianceSelection();
-            System.out.println("yay, it worked :)");
+            boolean quit = false;
+            int selection;
+            while(!quit) {
+                System.out.println("Please choose an item to test:");
+                System.out.println("\t1:\tGet team list");
+                System.out.println("\t2:\tGet match list");
+                System.out.println("\t3:\tScout a match");
+                System.out.println("\t4:\tExport team data");
+                System.out.println("\t5:\tImport team data");
+                System.out.println("\t6:\tRun alliance selection");
+                System.out.println("\t7:\tUpdate averages/stats");
+                System.out.println("\t8:\tDisplay a team's stats");
+                System.out.println("\t0:\tQuit");
+                selection = scanner.nextInt();
+                switch(selection) {
+                    case 1: //print team list
+                        newEvent.printTeamList();
+                        break;
+                    case 2: //Get match list
+                        newEvent.printMatchList();
+                        break;
+                    case 3: //Scout a match
+
+                        break;
+                    case 4: //Export matches to file
+                        newEvent.exportMatches();
+                        break;
+                    case 5: //Import matches
+                        newEvent.importMatches();
+                        break;
+                    case 6: //Alliance Selection
+                        newEvent.selectAlliances();
+                        break;
+                    case 7: //Update averages/stats
+                        newEvent.updateAverages();
+                    case 8: //Display a team's stats
+                        System.out.println("Which team's stats would you like to access? (make sure averages are updated)");
+                        int query = scanner.nextInt();
+                        if (newEvent.atEvent(query)) {
+                            newEvent.getTeam(query);
+                        }
+                    case 0: //Quit
+                        quit=true;
+                        break;
+                    default:
+                        System.out.println("Please enter a valid command.");
+                        break;
+                }
+            }
+            System.out.println("End!");
 
         } catch (Exception e) {
             //DONE: handle exception
@@ -35,20 +78,6 @@ public class App {
             System.out.println("Wow didn't work :(");
         }
         return;
-
- */
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter event key:\t");
-        String key = scanner.nextLine();
-        System.out.println("Enter team number");
-        int teamNum = scanner.nextInt();
-        Team team = new Team(teamNum, key);
-        team.testImport();
-        team.testScout();
-        team.updateStats();
-        team.displayStats();
-
-
 
     }
 
